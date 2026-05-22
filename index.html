@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BiGDEE STORE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar">
+      <a class="brand" href="#">
+        <span class="brand-icon">BiG</span>
+       DEE STORE
+      </a>
+
+      <div class="nav-actions">
+        <a href="#products">Shop</a>
+        <a href="#deals">Deals</a>
+        <button class="cart-button" id="openCartButton" type="button" aria-label="Open cart">
+          Cart
+          <span id="cartCount">0</span>
+        </button>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Fresh picks from Fake Store API</p>
+        <h1>Simple shopping, clean style.</h1>
+        <p class="hero-text">
+          Browse clothing, jewelry, and tech essentials with a lightweight cart
+          built using only HTML, CSS, and JavaScript.
+        </p>
+        <a class="hero-button" href="#products">Start Shopping</a>
+      </div>
+
+      <div class="hero-panel" aria-label="Featured offer">
+        <span class="sale-badge">Today</span>
+        <h2>New arrivals</h2>
+        <p>Products load live from fakestoreapi.com.</p>
+        <div class="hero-stats">
+          <div>
+            <strong id="productTotal">0</strong>
+            <span>Items</span>
+          </div>
+          <div>
+            <strong>4</strong>
+            <span>Categories</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="toolbar" id="products">
+      <div>
+        <p class="eyebrow">Catalog</p>
+        <h2>Featured Products</h2>
+      </div>
+
+      <div class="filters">
+        <input id="searchInput" type="search" placeholder="Search products">
+        <select id="categorySelect" aria-label="Choose a category">
+          <option value="all">All categories</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="status-message" id="statusMessage">Loading products...</section>
+    <section class="product-grid" id="productGrid"></section>
+  </main>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-box">
+      <div class="cart-header">
+        <div>
+          <p class="eyebrow">Your cart</p>
+          <h2>Order Summary</h2>
+        </div>
+        <button class="icon-button" id="closeCartButton" type="button" aria-label="Close cart">x</button>
+      </div>
+
+      <div class="cart-items" id="cartItems"></div>
+
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>Total</span>
+          <strong id="cartTotal">$0.00</strong>
+        </div>
+        <button class="checkout-button" type="button">Checkout</button>
+      </div>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
