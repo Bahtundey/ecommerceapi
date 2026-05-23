@@ -432,6 +432,9 @@ main {
   .hero {
     padding-top: 48px;
   }
+  .product-image-wrap {
+height: 300px;
+  }
 }
 
 @media (max-width: 680px) {
@@ -462,4 +465,8 @@ main {
   .product-card {
     min-height: initial;
   }
+
+  .product-image-wrap {
+    height: 500px;
+      }
 }
