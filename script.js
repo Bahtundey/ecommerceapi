@@ -20,7 +20,7 @@ const checkoutButton = document.getElementById("checkoutButton");
 let allProducts = [];
 let cart = [];
 
-// These functions run when the page first opens.
+
 getProducts();
 updateCart();
 
